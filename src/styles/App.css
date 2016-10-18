@@ -1,0 +1,292 @@
+/* Fonts */
+@font-face {
+  font-family: "ProximaNova-Black";
+  font-weight: Black;
+  src: url("../fonts/ProximaNova-Black.otf") format("opentype");
+}
+
+@font-face {
+  font-family: "ProximaNova-Bold";
+  font-weight: Bold;
+  src: url("../fonts/ProximaNova-Bold.otf") format("opentype");
+}
+
+@font-face {
+  font-family: "ProximaNova-BoldIt";
+  font-weight: BoldIt;
+  src: url("../fonts/ProximaNova-BoldIt.otf") format("opentype");
+}
+
+@font-face {
+  font-family: "ProximaNova-Extrabold";
+  font-weight: Extrabold;
+  src: url("../fonts/ProximaNova-Extrabold.otf") format("opentype");
+}
+
+@font-face {
+  font-family: "ProximaNova-Light";
+  font-weight: Light;
+  src: url("../fonts/ProximaNova-Light.otf") format("opentype");
+}
+
+@font-face {
+  font-family: "ProximaNova-LightItalic";
+  font-weight: LightItalic;
+  src: url("../fonts/ProximaNova-LightItalic.otf") format("opentype");
+}
+
+@font-face {
+  font-family: "ProximaNova-Reg";
+  font-weight: Reg;
+  src: url("../fonts/ProximaNova-Reg.otf") format("opentype");
+}
+
+@font-face {
+  font-family: "ProximaNova-Regular";
+  font-weight: Regular;
+  src: url("../fonts/ProximaNova-Regular.otf") format("opentype");
+}
+
+@font-face {
+  font-family: "ProximaNova-Sbold";
+  font-weight: Sbold;
+  src: url("../fonts/ProximaNova-Sbold.otf") format("opentype");
+}
+
+@font-face {
+  font-family: "ProximaNova-SemiBold";
+  font-weight: Semibold;
+  src: url("../fonts/ProximaNova-SemiBold.otf") format("opentype");
+}
+
+/* Base Application Styles */
+
+html, body {
+  height: 100%;
+}
+
+body {
+  font-family: "ProximaNova-Regular", "Helvetica Neue", Helvetica, Arial, sans-serif !important;
+  background: #fff;
+}
+
+.col-no-marg {
+  margin: 0 !important;
+}
+
+.col-no-pad {
+  padding: 0 !important;
+}
+
+.container {
+  padding: 0 0 15px 0;
+}
+
+.catchphrase {
+  position: relative;
+  letter-spacing: 0.5rem;
+}
+
+.separator {
+  position: relative;
+  width: calc(650px / 2);
+  height: 3px;
+  background: #EF35EA;
+  margin: 3rem auto 0 auto !important;
+  text-align: center;
+}
+
+.logo {
+  width: 100%;
+  max-width: 60px;
+}
+
+a {
+  text-decoration: none;
+}
+
+.active {
+  text-decoration: underline;
+}
+
+.yButtonTextStep p {
+  margin: 10px 0 0 0;
+  font-family: "ProximaNova-Bold";
+}
+
+.yButton {
+  color: #FFFC64;
+  background: #000;
+  border-bottom: 5px solid #EF35EA;
+  letter-spacing: 0.1rem;
+
+  transition: 0.3s all;
+}
+
+.yButton:focus, .yButton:hover {
+  color: #FFFC64;
+  background: #2d2d2d;
+  border-bottom: 5px solid #EF35EA;
+}
+
+.productPreviewImg {
+  width: 100%;
+  max-width: 150px;
+}
+
+.productPreviewImg:hover {
+  opacity: 0.5;
+}
+
+.productPreviewText {
+  width: auto;
+  margin: 0 auto;
+  color: #424242;
+  text-decoration: none;
+  text-align: center;
+  transform: translateY(50%);
+}
+
+.shirt:hover + .productPreviewText, 
+.crewneck:hover + .productPreviewText,
+.cap:hover + .productPreviewText {
+  color: #EF35EA;
+  text-decoration: none;
+
+  transition: 0.5s all;
+}
+
+.no-text-decoration {
+  text-decoration: none !important;
+}
+
+.yNav li.active {
+  background: transparent !important;
+}
+
+.social-link {
+  width: 100%;
+  max-width: 75px;
+  text-align: center;
+}
+
+.social-text {
+  transition: 0.2s all;
+
+  transform: translateY(-100%);
+}
+
+.social-icon {
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(100%);
+
+  transition: 0.5s all;
+}
+
+.social-link a:hover {
+  background-color: transparent !important;
+}
+
+.social-link:hover .social-text {
+  opacity: 0;
+  visibility: hidden;
+
+  transform: translateY(-100%);
+}
+
+.social-link:hover .social-icon {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(-125%);
+}
+
+button {
+  appearance: none;
+  background: none;
+}
+
+.c-hamburger {
+  display: block;
+  position: relative;
+  overflow: hidden;
+  margin: 0; padding: 0;
+  width: 50px;
+  height: 50px;
+  font-size: 0;
+  text-indent: -9999px;
+  appearance: none;
+  box-shadow: none;
+  border-radius: none;
+  border: none;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.c-hamburger:focus {
+  outline: none;
+}
+
+.c-hamburger span {
+  display: block;
+  position: absolute;
+  top: 25px;
+  left: 15px;
+  right: 15px;
+  height: 2px;
+  background: black;
+}
+
+.c-hamburger span:before,
+.c-hamburger span:after {
+  position: absolute;
+  display: block;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background-color: black;
+  content: "";
+}
+
+.c-hamburger span:before {
+  top: -10px;
+}
+
+.c-hamburger span:after {
+  bottom: -10px;
+}
+
+.c-hamburger--compress span:before, .c-hamburger--compress span:after {
+  transition: all 0.1s;
+}
+
+.c-hamburger--compress:hover span:before {
+  top: -7px;
+}
+
+.c-hamburger--compress:hover span:after {
+  bottom: -7px;
+}
+
+.product {
+  margin: "25px 0";
+}
+
+.shopping-cart {
+  position: relative;
+  width: 50px;
+  height: 50px;
+  background: rgba(0, 0, 0, 0.03);
+  border-radius: 50%;
+}
+
+.shopping-cart span {
+  font-family: "ProximaNova-Bold";
+  position: absolute;
+  top: 5px; right: 0; bottom: 0; left: 0;
+  width: 25px;
+  height: 25px;
+  text-align: center;
+  margin: auto;
+  color: #000;
+}
