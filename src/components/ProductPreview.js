@@ -1,8 +1,6 @@
 require("normalize.css/normalize.css");
 require("styles/App.css");
 
-import ReactCSSTransitionGroup from "react-addons-css-transition-group";
-
 import React from "react";
 import { Link } from "react-router";
 import { Nav, NavItem, Grid, Row, Col, Button } from "react-bootstrap";

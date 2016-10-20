@@ -7,6 +7,8 @@ import { Nav, NavItem, Grid, Row, Col, Button } from "react-bootstrap";
 
 import FontAwesome from "react-fontawesome";
 
+import CartButton from "./CartButton";
+
 class Header extends React.Component {
 	constructor() {
 		super();
@@ -54,7 +56,7 @@ class Header extends React.Component {
 			    </Col>
   			)
   		}
-  		if (this.props.pathname === "/products") {
+  		if (this.props.pathname !== "/") {
 	  		return (
 				<Col>
 					<div 
@@ -63,7 +65,7 @@ class Header extends React.Component {
 							alignItems: "center",
 							position: "fixed",
 							zIndex: "1000",
-							width: "100%",
+							// width: "100%",
 							height: "100px",
 							top: "0",
 							right: "0",
@@ -88,9 +90,7 @@ class Header extends React.Component {
 							<img src="../images/logo.svg" alt="Shop Lyrics Logo" className="logo" />
 						</Link>
 
-						<div className="pull-right shopping-cart">
-							<span>3</span> 
-						</div>
+						<CartButton count={ localStorage.getItem("count") } />
 					</div>
 				</Col>
 	  		)
@@ -98,9 +98,9 @@ class Header extends React.Component {
   	}
     render() {
 	    return (
-		    <Grid>
+	    	<div>
 		    	{ this.renderNavigation() }
-		    </Grid>
+		    </div>
 	    );
     }
 }

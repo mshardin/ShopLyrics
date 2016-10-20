@@ -99,6 +99,7 @@ body {
 .logo {
   width: 100%;
   max-width: 60px;
+  min-width: 60px;
 }
 
 a {
@@ -268,8 +269,12 @@ button {
   bottom: -7px;
 }
 
+.special {
+  padding: 100px 0 15px 0;
+}
+
 .product {
-  margin: "25px 0";
+  padding: 15px 0;
 }
 
 .shopping-cart {
@@ -278,6 +283,7 @@ button {
   height: 50px;
   background: rgba(0, 0, 0, 0.03);
   border-radius: 50%;
+  cursor: pointer;
 }
 
 .shopping-cart span {
@@ -289,4 +295,45 @@ button {
   text-align: center;
   margin: auto;
   color: #000;
+}
+
+.product-image {
+  padding: 0 0;
+}
+
+.product-description {
+  position: fixed;
+  top: 0; right: 0;
+  width: 400px;
+  height: 100%;
+  padding: 100px 0 0 0;
+}
+
+.product-description h2, .product-description h3, .product-description h4, .product-description p {
+  padding: 0 2rem;
+}
+
+.product-image--front, .product-image--back {
+  margin: 0 auto;
+}
+
+/* Small devices (tablets, 768px and up) */
+@media (max-width: 768px) { 
+
+}
+
+@media (max-width: 960px) {
+
+}
+
+/* Medium devices (desktops, 992px and up) */
+@media (max-width: 992px) {
+  .product-description {
+    position: relative;
+  }
+}
+
+/* Large devices (large desktops, 1200px and up) */
+@media (max-width: 1200px) {
+
 }

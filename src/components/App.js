@@ -1,8 +1,8 @@
 import React from "react";
-import { Grid } from "react-bootstrap";
+import { Grid, Col } from "react-bootstrap";
 
 const App = ({children}) => (
-    <Grid bsClass="container-fluid"> 
+    <Grid fluid> 
     	{ children }
     </Grid>
 )
