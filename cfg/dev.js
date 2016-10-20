@@ -35,22 +35,6 @@ config.module.loaders.push(
       config.additionalPaths,
       [ path.join(__dirname, '/../src') ]
     )
-  },
-  // {
-  //   test: /\.styl$/,
-  //   loader: 'style-loader!css-loader!stylus-loader',
-  //   include: [].concat(
-  //     config.additionalPaths,
-  //     [ path.join(__dirname, '/../src') ]
-  //   )
-  // },
-  {
-    test: /\.(woff2?|ttf|eot|svg|otf)$/,
-    loader: 'url?limit=10000',
-    include: [].concat(
-      config.additionalPaths,
-      [ path.join(__dirname, '/../src') ]
-    )
   }
 );
 
